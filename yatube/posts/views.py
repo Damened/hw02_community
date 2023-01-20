@@ -3,11 +3,11 @@ from .models import Post, Group
 from django.shortcuts import render, get_object_or_404
 
 
-number_post = 10
+NUMBER_POST = 10
 
 
 def index(request):
-    posts = Post.objects.order_by('-pub_date')[:number_post]
+    posts = Post.objects.order_by('-pub_date')[:NUMBER_POST]
     context = {
         'posts': posts,
     }
